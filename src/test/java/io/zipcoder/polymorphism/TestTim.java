@@ -36,7 +36,7 @@ public class TestTim {
         String expectedSpeak = "Ah!";
 
         panda.speak();
-        Assert.assertEquals("Ah!", expectedSpeak);
+        Assert.assertEquals(expectedSpeak, "Ah!");
 
     }
 }
