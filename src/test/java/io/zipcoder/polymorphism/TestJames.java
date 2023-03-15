@@ -2,7 +2,7 @@ package io.zipcoder.polymorphism;
 
 import org.junit.Test;
 
-public class MainApplicationTest {
+public class TestJames {
 @Test
     public void testMe(){}
 }

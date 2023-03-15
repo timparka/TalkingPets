@@ -1,4 +1,3 @@
 package io.zipcoder.polymorphism;
-
-public class MainApplication {
+public class MainJames {
 }
