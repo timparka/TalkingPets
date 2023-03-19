@@ -5,14 +5,18 @@ import org.junit.Assert;
 import org.junit.Test;
 
 public class TestJames {
-@Test
+    @Test
+    public void name() {
+    }
+
+    @Test
     public void testCreateDog(){
     // Given
     String expectedName = "PimTark";
     Integer expectedAge = 2;
 
     // When
-    Pet dog = new Pet();
+    Dog dog = new Dog("PimTark", 2);
     String actualName = dog.getName();
     Integer actualAge = dog.getAge();
     // Then
@@ -23,17 +27,19 @@ public class TestJames {
     // Given
     String expectedName = "PimTark";
     // When
-    Pet dog =  new Pet();
+    Dog dog = new Dog("PimTark", 90);
     String actualName = dog.setName();
 
     // Then
     Assert.assertEquals(expectedName, actualName);
     }
+    @Test
     public void testSpeak(){
         // Given
+        String name = "Tim";
+        int age = 60;
+        Pet dog = new Dog(name, age);
         String expectedSpeak = "Woof!";
-        Pet dog = new Pet();
-
         // When
         dog.speak();
 

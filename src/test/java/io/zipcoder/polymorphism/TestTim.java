@@ -14,16 +14,18 @@ public class TestTim {
     @Test
     public void testCreateRedPanda(){
         //given
-        Pet panda = new redPanda();
+        String name = "James";
+        String gender = "Male";
+        Pet panda = new Redpanda(name, gender);
         String expectedGender = "Male";
         String expectedName = "James";
 
         // When
-        Pet panda = new redPanda("James", "Male");
+        Redpanda redPanda = new Redpanda("James", "Male");
 
         // Then
-        String actualGender = panda.getGender();
-        String actualName = panda.getName();
+        String actualGender = redPanda.getGender();
+        String actualName = redPanda.getName();
 
         Assert.assertEquals(expectedGender, actualGender);
         Assert.assertEquals(expectedName, actualName);
@@ -32,11 +34,12 @@ public class TestTim {
 
     @Test
     public void testSpeak(){
-        Pet panda = new redPanda("James", "Male");
+        Redpanda panda = new Redpanda("James", "Male");
         String expectedSpeak = "Ah!";
 
         panda.speak();
         Assert.assertEquals(expectedSpeak, "Ah!");
 
     }
+
 }
