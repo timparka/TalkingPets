@@ -1,16 +1,12 @@
 package io.zipcoder.polymorphism;
 
-
 import org.junit.Assert;
 import org.junit.Test;
 
-public class TestJames {
-    @Test
-    public void name() {
-    }
+public class TestDog {
 
     @Test
-    public void testCreateDog(){
+    public void testCreatePet(){
     // Given
     String expectedName = "PimTark";
     Integer expectedAge = 2;
@@ -23,15 +19,15 @@ public class TestJames {
     Assert.assertEquals(expectedName, actualName);
     Assert.assertEquals(expectedAge, actualAge);
     }
+    @Test
     public void testSetName(){
     // Given
     String expectedName = "PimTark";
     // When
     Dog dog = new Dog("PimTark", 90);
     String actualName = dog.setName();
-
     // Then
-    Assert.assertEquals(expectedName, actualName);
+    Assert.assertEquals(expectedName, dog.getName());
     }
     @Test
     public void testSpeak(){
@@ -39,26 +35,38 @@ public class TestJames {
         String name = "Tim";
         int age = 60;
         Pet dog = new Dog(name, age);
-        String expectedSpeak = "Woof!";
+        String expectedSpeak = "Bark!";
         // When
         dog.speak();
 
         // Then
-        Assert.assertEquals(expectedSpeak, "Woof!");
+        Assert.assertEquals(expectedSpeak, dog.speak());
     }
+    @Test
     public void testGetName(){
         // Given
-
-
+        String expectedName = "PimTark";
+        int age = 5;
+        Dog dog = new Dog(expectedName,age);
         // When
-
+        String actualName = dog.getName();
 
         // Then
-
-
-
+        Assert.assertEquals(expectedName,actualName);
     }
-
+    @Test
+    public void testConstructor() {
+        // Given
+        String expectedName = "PimTark";
+        int age = 2;
+        Dog dog = new Dog(expectedName, age);
+        // When
+        String actualName = dog.getName();
+        int actualAge = dog.getAge();
+        // Then
+        Assert.assertEquals(expectedName, actualName);
+        Assert.assertEquals(age, actualAge);
+    }
 
 }
 

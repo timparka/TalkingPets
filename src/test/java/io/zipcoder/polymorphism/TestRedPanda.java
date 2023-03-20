@@ -3,7 +3,7 @@ package io.zipcoder.polymorphism;
 import org.junit.Assert;
 import org.junit.Test;
 
-public class TestTim {
+public class TestRedPanda {
 //    Create a program that asks the user how many pets they have.
 //    Once you know how many pets they have, ask them what kind of pet each one is,
 //    along with each pet's name. For now your program should just hold onto the user
